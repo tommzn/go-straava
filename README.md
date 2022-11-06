@@ -6,4 +6,26 @@
 ![Strava API Version](https://img.shields.io/badge/Strava_API-v3-blue)
 
 # Strava API Client
-Golang Strava API Client.
+A client to access APIs provided by Strava.
+
+## API Version
+This client is implemented for Strave API v3.
+
+# Authtication
+Strave used OAuth2 for their APIs. This client uses [TokenSource](https://pkg.go.dev/golang.org/x/oauth2#TokenSource) from [oauth2](https://pkg.go.dev/golang.org/x/oauth2) for authentication. 
+Have a look at [Getting Started with the Strava API](https://developers.strava.com/docs/getting-started/) to get details about how to authenticate your app to access the API.
+Base of OAuth2 authentication is [oauth2.Config](https://pkg.go.dev/golang.org/x/oauth2#Config) where you specifiy your client id, client secret and scopes.
+
+## Helper
+There're to helper to create reuired token source. 
+### TokenSourceFromAuthorizationCode
+This method uses Exchnage method on oauth2 config to access access and refresh token for an authorization code. You should persist your refresh token somewhere, because an authorization code an be used only once.
+### TokenSourceFromRefreshToken
+If you already have a refresh token you can use this method to create a token source for it.
+
+# What about all the other models and endpoints?
+Scope of this client is limited to models and endpoints I'm using in my project atm. Feel free to create an enhancement issue to request an extension.
+
+# Links
+- [Getting Started with the Strava API](https://developers.strava.com/docs/getting-started/)
+- [Strava API Documentation](https://developers.strava.com/docs/reference/)
