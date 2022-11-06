@@ -58,7 +58,7 @@ type ActivityStats struct {
 	RecentRideTotals ActivityTotal `json:"recent_ride_totals"`
 
 	// The recent (last 4 weeks) run stats for the athlete.
-	RecentRunTotals *ActivityTotal `json:"recent_run_totals"`
+	RecentRunTotals ActivityTotal `json:"recent_run_totals"`
 
 	// The recent (last 4 weeks) swim stats for the athlete.
 	RecentSwimTotals ActivityTotal `json:"recent_swim_totals"`
