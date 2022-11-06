@@ -12,14 +12,14 @@ A client to access APIs provided by Strava.
 This client is implemented for Strave API v3.
 
 # Authtication
-Strave used OAuth2 for their APIs. This client uses [TokenSource](https://pkg.go.dev/golang.org/x/oauth2#TokenSource) from [oauth2](https://pkg.go.dev/golang.org/x/oauth2) for authentication. 
+Strave uses OAuth2 for their APIs. This client uses [TokenSource](https://pkg.go.dev/golang.org/x/oauth2#TokenSource) from [oauth2](https://pkg.go.dev/golang.org/x/oauth2) for authentication. 
 Have a look at [Getting Started with the Strava API](https://developers.strava.com/docs/getting-started/) to get details about how to authenticate your app to access the API.
 Base of OAuth2 authentication is [oauth2.Config](https://pkg.go.dev/golang.org/x/oauth2#Config) where you specifiy your client id, client secret and scopes.
 
 ## Helper
-There're to helper to create reuired token source. 
+There're to helper to create required token source. Both methods expect a [oauth2.Config](https://pkg.go.dev/golang.org/x/oauth2#Config).
 ### TokenSourceFromAuthorizationCode
-This method uses Exchnage method on oauth2 config to access access and refresh token for an authorization code. You should persist your refresh token somewhere, because an authorization code an be used only once.
+This method uses [Exchange](https://pkg.go.dev/golang.org/x/oauth2#Config.Exchange) method on oauth2 config to get access and refresh token for an authorization code. You should persist your refresh token somewhere, because an authorization code can be used only once.
 ### TokenSourceFromRefreshToken
 If you already have a refresh token you can use this method to create a token source for it.
 
