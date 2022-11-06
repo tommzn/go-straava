@@ -175,7 +175,7 @@ func appendPagination(query *url.Values, pagination *Pagination) {
 	}
 }
 
-// CleanEmptyStrings replaces all occurences of "" in given content with an empty Json object {}.
+// CleanEmptyStrings replaces all occurrences of "" in given content with an empty Json object {}.
 func cleanEmptyStrings(content []byte) []byte {
 	return []byte(strings.ReplaceAll(string(content), "\"\"", "{}"))
 }

@@ -138,7 +138,7 @@ type DetailedAthlete struct {
 	Id int64 `json:"id"`
 }
 
-// Error occured in an api call.
+// Error occurred in an api call.
 type Error struct {
 
 	// The code associated with this error.
