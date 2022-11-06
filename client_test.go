@@ -22,6 +22,7 @@ func TestClientTestSuite(t *testing.T) {
 func (suite *ClientTestSuite) TestAssignAthleteId() {
 
 	client := clientForTest()
+
 	var athleteId int64 = 12345567890
 	client.WithAthleteId(athleteId)
 	suite.Equal(athleteId, *client.athleteId)
