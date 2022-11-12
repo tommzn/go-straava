@@ -11,7 +11,7 @@ A client to access APIs provided by Strava.
 ## API Version
 This client is implemented for Strave API v3.
 
-# Authtication
+# Authentication
 Strave uses OAuth2 for their APIs. This client uses [TokenSource](https://pkg.go.dev/golang.org/x/oauth2#TokenSource) from [oauth2](https://pkg.go.dev/golang.org/x/oauth2) for authentication. 
 Have a look at [Getting Started with the Strava API](https://developers.strava.com/docs/getting-started/) to get details about how to authenticate your app to access the API.
 Base of OAuth2 authentication is [oauth2.Config](https://pkg.go.dev/golang.org/x/oauth2#Config) where you specifiy your client id, client secret and scopes.
